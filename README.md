@@ -19,5 +19,7 @@ your_dir/
   -GM_methods
   -PR_methods
 ```
-The 3rd_party consists of some dependent codes (Shape Context, geodesic, linear assignment, etc) and can be downlowed [here](http://captain.whu.edu.cn/FRGM/code/3rd_party.zip).
+The 3rd_party consists of some dependent codes (Shape Context, geodesic, linear assignment, etc) and can be downlowed [here](http://captain.whu.edu.cn/FRGM/code/3rd_party.zip). 
+
+The data can be downloaded [here](http://captain.whu.edu.cn/FRGM/data/data.zip).
 
