@@ -1,8 +1,8 @@
-%% comparison of ICP/CPD/JRMPC/cdfHC/GMM_reg/L2E/GLS/FGM-D
+%% comparison of ICP/CPD/GMM_reg/GLS/FGM-D
 
-load('cpd_data2D_fish');
+data_name = 1;%1=beijing;2=whale;3=chinese;4=cpd_fish;5=fish_2d;
+X = load_testdata(data_name);
 
-X = cpdfish{1,1};
 LX = length(X(:,1));
 [X,~] = normalize_point(X,1);
 
@@ -63,28 +63,9 @@ if strcmp(type, 'similar')
 
     [mseicp] = measurement(X,dataout,1:LX,[])
     
-    %% JPRMPC
-    XT = normalize_point(XT,1);
-    X = normalize_point(X,1);
-    [Rotation, TV] = JRMPC_2d(X,XT,100,1);
-    
-    [msejpr] = measurement([TV{1}(1:2,:)]',[TV{2}(1:2,:)]',1:LX,[])
+   
 end
-%% cdfHC
-XT = normalize_point(XT,1);
-X = normalize_point(X,1);
-cpdfish{1,1} = X;
-cpdfish{1,2} = XT;
-[T,En] = HC2Reg_TPS(cpdfish,1,200);
 
-[msecdf] = measurement(T{1},T{2},1:LX,[])
-%% L2E
-XT = normalize_point(XT,1);
-X = normalize_point(X,1);
-order1 = 1:LX;
-[idt,X_trans] = L2E_reg_ma(X(order1,:),XT,10,1,'iter');
-
-[msel2e] = measurement(X_trans,XT,order1,[])
 %% GLS
 XT = normalize_point(XT,1);
 X = normalize_point(X,1);
@@ -110,10 +91,11 @@ Transform=cpd_register(XT,X,opt);
 [msegls] = measurement(Transform.Y,XT,1:LX,[])
 %%
 option.regist_trans = type_set{3};
-option.regist_it = 50;
-option.regist_rota = strcmp(type, 'similar');
-option.regist_display = 1;
-option.regist_normalize = 1;
+option.regist_it = 50;%the max number of rigistration iterations
+option.regist_rota = strcmp(type, 'similar');% 1=: rotation invariant Shape Context; 0: otherwise
+option.regist_display = 1;% 1:show the registrations; 0: otherwise
+option.regist_normalize = 1;% 1: with normolization; 0: without
+option.regist_save = 0;% 1: save as gif or not
 
 option.GM_convex_or_non = [zeros(1,5),ones(1,option.regist_it)];%alternation of objective functions
 option.GM_lambda1 = 1;% weight of unary potential
