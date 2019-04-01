@@ -50,7 +50,7 @@ sig = [0.5,0.5].^2;
 weight = [1,1];
 asgFRGM = FRGM_Gen(Map_ini,M,DXX,DYY,SX,option,asgT,sig,weight)
 
-%%
+%% plot
 map1 = asgHun(asgFRGM.map2);
 %map1 = asgHun(Map_ini);
 YP = YY;

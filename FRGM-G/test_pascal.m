@@ -41,7 +41,7 @@ else
 end
 
 if outliers > 0 && remove > 0
-    [YY,Y_rest,removerate, ~] = car_remove(XX,YY,order,removal_time,[]);
+    [YY,Y_rest,removerate, ~] = XY_remove(XX,YY,order,removal_time,[]);
     LY = length(Y_rest);
     Pts{1,1} = XX'*max_size;
     Pts{1,2} = YY'*max_size;
