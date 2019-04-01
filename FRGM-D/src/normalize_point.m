@@ -1,4 +1,5 @@
 function [Xn,max_bound] = normalize_point(X,s)
+% point normalization
 if nargin < 2 || isempty(s)
     s = 1;
 end

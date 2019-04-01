@@ -1,11 +1,11 @@
 function [ASSIGN,para] = FRGM_affine(X,Y,option,order)
 % calculate the affine transformation parameters and correspondence between two graphs
-%Input:
+% Input:
 %    X,Y: point sets
 %    option:options of the algorithm
 %    order: order of points in X
 %    
-%Output:
+% Output:
 %    ASSIGN:the correspondence maps
 %    para: the calculated parameters of transformation
 
@@ -46,7 +46,7 @@ option.lam_sparse = option.GM_lam_sparse;
 option.geofunc = option.GM_geofunc;
 option.unary = option.GM_unary;
 
-%---------------------display and write-----------%
+%---------------------display and save-----------%
 if option.regist_display > 0
     filename = '.\save\affine.gif';
     hh = figure;subplot(1,2,1);
@@ -56,10 +56,12 @@ if option.regist_display > 0
     subplot(1,2,2);
     plot(X(:,1),X(:,2),'r.',Y(:,1),Y(:,2),'b.','markersize',10);axis off;
     drawnow;
-    frame = getframe(hh);
-    im = frame2im(frame);
-    [imind,cm] = rgb2ind(im,256);
-    imwrite(imind,cm,filename,'gif','WriteMode','overwrite', 'Loopcount',inf);
+    if option.regist_save > 0
+        frame = getframe(hh);
+        im = frame2im(frame);
+        [imind,cm] = rgb2ind(im,256);
+        imwrite(imind,cm,filename,'gif','WriteMode','overwrite', 'Loopcount',inf);
+    end
 end
 
 %-----------------alternative calculation of ASSIGN and para-------------% 
@@ -138,10 +140,12 @@ while cnt <= max_regist && regist_tol_diff >= 1.0e-7%%regist_tol_diff >= 1.0e-2
         hold on,plot(Y(:,1),Y(:,2),'b.','markersize',10);
         hold off;
         drawnow;
-        frame = getframe(hh);
-        im = frame2im(frame);
-        [imind,cm] = rgb2ind(im,256);
-        imwrite(imind,cm,filename,'gif','WriteMode','append','DelayTime',0.2);
+        if option.regist_save > 0
+            frame = getframe(hh);
+            im = frame2im(frame);
+            [imind,cm] = rgb2ind(im,256);
+            imwrite(imind,cm,filename,'gif','WriteMode','append','DelayTime',0.2);
+        end
     end
 end
 %-------------------output---------------%

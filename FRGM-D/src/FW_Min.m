@@ -1,6 +1,5 @@
 function [Map_next] = FW_Min(X,Y,M,SX,Map_ini,option,approximate)
 % Frank-Wolfe method-based minimization:
-% min_P a1*<P,M> + a2*L(P) + a3*S(P)
 %Input:
 % X, Y: nodes of two graphs
 % M: dissimilarity matrix between X and Y: M(Xi,Yj)
@@ -75,7 +74,6 @@ while cnt <= maxiter  && kp <= ST && abs(right) >= 1.0e-7
         M = M-min(M(:));
         M = M/max(M(:));
         Map = sinkhorn_OT(ones(LX,1),ones(LY,1)*(LX/LY),M,lambda,1.0e-6,1000,0);
-        %Map = partial_OT(ones(LX,1),ones(LY,1),M,lambda,1,1.0e-7,3000);
     else
         M1 = [M,ones(LX,10)*max(max(abs(M)))+100];
         % M1 = M;

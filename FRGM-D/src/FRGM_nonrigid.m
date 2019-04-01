@@ -56,10 +56,12 @@ if option.regist_display > 0
     subplot(1,2,2);
     plot(X(:,1),X(:,2),'r.',Y(:,1),Y(:,2),'b.','markersize',20);axis off;
     drawnow;
-    frame = getframe(hh);
-    im = frame2im(frame);
-    [imind,cm] = rgb2ind(im,256);
-    imwrite(imind,cm,filename,'gif','WriteMode','overwrite', 'Loopcount',inf);
+    if option.regist_save > 0
+        frame = getframe(hh);
+        im = frame2im(frame);
+        [imind,cm] = rgb2ind(im,256);
+        imwrite(imind,cm,filename,'gif','WriteMode','overwrite', 'Loopcount',inf);
+    end
 end
 
 %-----------------alternative calculation of ASSIGN and para-------------% 
@@ -140,10 +142,12 @@ while cnt <= max_regist && regist_tol_diff >= 1.0e-6
         hold on,plot(Y(:,1),Y(:,2),'b.','markersize',10);
         hold off;
         drawnow;
-        frame = getframe(hh);
-        im = frame2im(frame);
-        [imind,cm] = rgb2ind(im,256);
-        imwrite(imind,cm,filename,'gif','WriteMode','append','DelayTime',0.2);
+        if option.regist_save > 0
+            frame = getframe(hh);
+            im = frame2im(frame);
+            [imind,cm] = rgb2ind(im,256);
+            imwrite(imind,cm,filename,'gif','WriteMode','append','DelayTime',0.2);
+        end
     end
 end
 

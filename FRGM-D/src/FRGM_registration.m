@@ -1,5 +1,5 @@
 function [Map,Para] = FRGM_registration(X,Y,GX,option)
-
+% parameters by default
 if nargin < 2, error('No enough inputs!'); end
 if nargin < 4, option.trans = 'similar'; end
 
