@@ -8,7 +8,7 @@ This work presents a functional representation for graph matching (FRGM). From t
 <p>
 
 # Usage
-1. The structure are as follows:
+The structure is organized as follows:
 ```
 your_dir/
   -3rd_party
@@ -23,3 +23,20 @@ The 3rd_party consists of some dependent codes (Shape Context, geodesic, linear 
 The data can be downloaded [here](http://captain.whu.edu.cn/FRGM/data/data.zip).
 
 The [GM_methods](http://captain.whu.edu.cn/FRGM/code/GM_methods.zip) and [PR_methods](http://captain.whu.edu.cn/FRGM/code/PR_methods.zip) consists of the implementations of the compared methods on general graph matching and Euclidean graph matching with geometric deformations, respectively.
+
+# Citation
+If you find our work useful in your research, please consider citing:
+```
+@article{FRGM_2019,
+  author    = {Fudong Wang and
+               Gui{-}Song Xia and
+               Nan Xue and
+               Yipeng Zhang and
+               Marcello Pelillo},
+  title     = {A Functional Representation for Graph Matching},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1901.05179},
+  archivePrefix = {arXiv},
+  eprint    = {1901.05179},
+}
+```
