@@ -30,7 +30,6 @@ while condition1 > 0 || condition2 > 0
     %      Map = asgHun(-M);% Hungarian algorithm for LAP
     
     M1 = [M,ones(LX,0)*max(max(abs(M)))+100];
-    % M1 = M;
     [rowsol] = lapjv(M1,1.0e0);% LAPJV algorithm for LAP
     Map = zeros(size(M));
     for i = 1:LX

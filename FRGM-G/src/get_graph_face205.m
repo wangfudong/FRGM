@@ -1,4 +1,5 @@
 function [D1,D2,hks1,hks2,source_id1,source_id2] = get_graph_face205(order)
+% load graphs in face205 dataset
 order1 = order(1);
 order2 = order(2);
 

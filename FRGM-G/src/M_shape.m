@@ -3,7 +3,7 @@ function [MS,BH1,BH2] = M_shape(X,Y,r0,r1,rota_inv)
 LX = length(X(:,1));
 LY = length(Y(:,1));
 
-if nargin > 4 && rota_inv > 0
+if nargin > 4 && rota_inv > 0% using rotation invariant Shape Context
     [BH1] = sc_compute_rota(X',zeros(1,LX),[],12,5,r0,r1,zeros(1,LX));%BH1(i,:)' is formed form a 5*12 matrix.
     [BH2] = sc_compute_rota(Y',zeros(1,LY),[],12,5,r0,r1,zeros(1,LY));
 else
