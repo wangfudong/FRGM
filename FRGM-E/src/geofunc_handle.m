@@ -2,7 +2,6 @@ function [Fgeo,grad_geo] = geofunc_handle(X,Y,SX,option)
 % handle for computing the gradient and function value of the
 % objective function
 % X,Y: points of two graphs
-% M: dissimilarity matrix between X and Y
 % SX: neighborhood matrix of GX and GY
 
 geofunc = option.geofunc;

@@ -73,9 +73,7 @@ while condition1 > 0 || condition2 > 0
     
 %     Map = asgHun(-M);% Hungarian algorithm for LAP
     
-
     M1 = [M,ones(LX,0)*max(max(abs(M)))+100];
-    % M1 = M;
     [rowsol] = lapjv(M1,1.0e0);% LAPJV algorithm for LAP
     Map = zeros(size(M));
     for i = 1:LX
@@ -83,7 +81,7 @@ while condition1 > 0 || condition2 > 0
     end
     
 %     [~,P] = sparseAssignmentProblemAuctionAlgorithm(sparse(max(max(M))-M));
-%     Auction algorithm for LAP, much faster for equal-sized case
+%     Auction algorithm for LAP, much faster in equal-sized case
 %     Map = full(P);
 
     if cnt <=30% for less iteration
