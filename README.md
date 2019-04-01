@@ -7,4 +7,16 @@ This work presents a functional representation for graph matching (FRGM). From t
 <img src="images/frgm-1.svg" width="500">
 <p>
 
-# Related works and codes
+# Usage
+1. The structure are as follows:
+```
+your_dir/
+  -3rd_party[download]()
+  -data[download]()
+  -FRGM-D
+  -FRGM-E
+  -FRGM-G
+  -GM_methods
+  -PR_methods
+
+
