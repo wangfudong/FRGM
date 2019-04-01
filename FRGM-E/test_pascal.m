@@ -38,7 +38,7 @@ else
 end
 
 if outliers > 0 && remove > 0
-    [YY,Y_rest,removerate, rest_out] = car_remove(XX,YY,order,removal_time,[]);    
+    [YY,Y_rest,removerate, rest_out] = XY_remove(XX,YY,order,removal_time,[]);    
     LY = length(Y_rest);
 else
     Y_rest = 1:LY;
@@ -58,5 +58,5 @@ option.full = 1;
 
 
 
-asgATGM = ATGM_testing(XX,YY,'del',order,option);
+asgATGM = FRGM_E(XX,YY,order,option);
 asgATGM.acc = ratemap(asgHun(asgATGM.X),order,Y_rest,0);

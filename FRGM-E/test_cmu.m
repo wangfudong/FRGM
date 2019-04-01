@@ -1,10 +1,10 @@
 %% test cmu house/hotel
-dataset = 2;% 1 for house (111 images), 2 for hotel (101 images)
+dataset = 1;% 1 for house (111 images), 2 for hotel (101 images)
 
 LX = 20;%LX<=30;
 LY = 30;%LY<=30;
 
-inds = [1,81];% <=101 or 111
+inds = [1,51];% <=101 or 111
 
 [Pts,Ims,nF] = fileload(dataset,inds);
 X = Pts{1,1};
@@ -27,4 +27,4 @@ option.geofunc = '1.21'; % the nonconvex objective function
 option.unary = 1;        % the linear unary term
 option.full = 1;         % 1 for fully-connected and 0 for delaunay triangulation
 
-asgATGM = ATGM_testing(XX,YY,'del',order,option);
+asgATGM = FRGM_E(XX,YY,order,option);

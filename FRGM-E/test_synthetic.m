@@ -26,5 +26,5 @@ option.geofunc = '1.21';
 option.unary = 1;
 option.full = 1;
 
-asgATGM = ATGM_testing(XX,YY,'del',order,option);
+asgATGM = FRGM_E(XX,YY,order,option);
 
