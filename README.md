@@ -28,16 +28,16 @@ The [GM_methods](http://captain.whu.edu.cn/FRGM/code/GM_methods.zip) and [PR_met
 # Citation
 If you find our work useful in your research, please consider citing:
 ```
-@article{FRGM_2019,
-  author    = {Fudong Wang and
-               Gui{-}Song Xia and
-               Nan Xue and
-               Yipeng Zhang and
-               Marcello Pelillo},
-  title     = {A Functional Representation for Graph Matching},
-  year      = {2019},
-  url       = {http://arxiv.org/abs/1901.05179},
-  archivePrefix = {arXiv},
-  eprint    = {1901.05179},
-}
+@ARTICLE{8723156, 
+author={F. {Wang} and N. {Xue} and Y. {Zhang} and G. {Xia} and M. {Pelillo}}, 
+journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+title={A Functional Representation for Graph Matching}, 
+year={2019}, 
+volume={}, 
+number={}, 
+pages={1-1}, 
+keywords={Strain;Linear programming;Time complexity;Measurement;Optimization;Pattern matching;Graph matching;functional representation;Frank-Wolfe method;geometric deformation}, 
+doi={10.1109/TPAMI.2019.2919308}, 
+ISSN={0162-8828}, 
+month={},}
 ```
