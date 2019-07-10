@@ -36,7 +36,6 @@ year={2019},
 volume={}, 
 number={}, 
 pages={1-1}, 
-keywords={Strain;Linear programming;Time complexity;Measurement;Optimization;Pattern matching;Graph matching;functional representation;Frank-Wolfe method;geometric deformation}, 
 doi={10.1109/TPAMI.2019.2919308}, 
 ISSN={0162-8828}, 
 month={},}
