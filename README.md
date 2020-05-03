@@ -28,7 +28,7 @@ The [GM_methods](http://captain.whu.edu.cn/FRGM/code/GM_methods.zip) and [PR_met
 # Citation
 If you find our work useful in your research, please consider citing:
 ```
-@ARTICLE{8723156, 
+@ARTICLE{FRGM, 
 author={F. {Wang} and N. {Xue} and Y. {Zhang} and G. {Xia} and M. {Pelillo}}, 
 journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
 title={A Functional Representation for Graph Matching}, 
