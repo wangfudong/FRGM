@@ -23,7 +23,7 @@ your_dir/
 The 3rd_party consists of some dependent codes (Shape Context, geodesic, linear assignment, etc) and can be downlowed [here](http://captain.whu.edu.cn/FRGM/code/3rd_party.zip). 
 The data can be downloaded [here](http://captain.whu.edu.cn/FRGM/data/data.zip).
 
-The [GM_methods](http://captain.whu.edu.cn/FRGM/code/GM_methods.zip) and [PR_methods](http://captain.whu.edu.cn/FRGM/code/PR_methods.zip) consists of the implementations of the compared methods on general graph matching and Euclidean graph matching with geometric deformations, respectively.
+The [GM_methods](http://captain.whu.edu.cn/FRGM/code/GM_methods.zip) and [PR_methods](http://captain.whu.edu.cn/FRGM/code/PR_methods.zip) consists of the implementations of the compared methods on general graph matching and Euclidean graph matching with geometric deformations, respectively. And you can also download them from our new work [ZAC](https://github.com/wangfudong/ZAC_GM).
 
 # Citation
 If you find our work useful in your research, please consider citing:
